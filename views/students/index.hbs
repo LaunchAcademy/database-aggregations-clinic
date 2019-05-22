@@ -1,0 +1,11 @@
+<h1>Students of Lornch Ablademy</h1>
+
+<table>
+  {{#each students }}
+  <tr>
+    <td>{{ this.name }}</td>
+    <td>{{ this.year }}</td>
+    <td>{{ this.demerit_count }}</td>
+  </tr>
+  {{/each}}
+</table>

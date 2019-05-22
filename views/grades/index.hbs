@@ -1,0 +1,11 @@
+<h1>All of the Grades for Students</h1>
+
+<table>
+  {{#each grades }}
+  <tr>
+    <td>{{ this.name }}</td>
+    <td>{{ this.year }}</td>
+    <td>{{ this.demerit_count }}</td>
+  </tr>
+  {{/each}}
+</table>
