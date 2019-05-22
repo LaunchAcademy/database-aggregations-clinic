@@ -33,7 +33,7 @@ VALUES
   ('Math', 94, 1),
   ('English', 91, 1),
   ('Science', 77, 1),
-  ('History', 67, 1),
+  ('History', 88, 1),
   ('Math', 55, 2),
   ('English', 88, 2),
   ('Science', 66, 2),

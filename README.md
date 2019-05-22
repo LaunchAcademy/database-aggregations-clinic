@@ -13,8 +13,10 @@ The students of Launch Academy have received their grades, but the higher ups ar
 
 The primary things we need to know are metrics regarding student demerits and grades. (demerits are marks against the student for being naughty or misbehaving, and if you see the names of the students, you may have an inkling as how they have been troublesome...)
 
-## Workflow
+## Core
 Eventually your information displayed via your Express application, but you may wish to create the queries needed to display your metrics first by entering `psql` or adding them to `queries.sql`.
+
+## Non-Core
 
 Once you have your queries, you can run them in your express app, gather the data into variables, and pass those to your view templates.
 
@@ -25,13 +27,14 @@ Once you have your queries, you can run them in your express app, gather the dat
 * Naughtiest Student: find students with the most demerits (either by sort or keyword)
 * Average Naughtiness: find average demerit count
 
-### Grade Data
+### Grade Data (tougher)
 
 * Average Grade for Class: What's the average grade for all of the students?
 * Average Grade for Each Student: Find the average grade for each student across all subjects (visualize last)
-* Grade Count: Find the number of
+* Average Grade in Science: Find the average grade for science
 * Most Struggling Student: Find the student with the worst average grade across all subjects
 * Best Student: Find the student with the best average grade across all subjects
+* Struggling Students: Find all students who have an average grade lower than 70
 
 **Aggregates**
 
