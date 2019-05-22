@@ -12,10 +12,11 @@
 * find the highest grade
 * find average grade
 
+
 add new grades to see how it changes the numbers
 
 non-core
-* 
+*
 
 
 COUNT, SUM, MIN, MAX, and AVG

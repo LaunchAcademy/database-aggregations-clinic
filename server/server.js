@@ -36,18 +36,23 @@ app.listen(3000, "0.0.0.0", () => {
   console.log("Server is listening...")
 })
 
+app.get("/", (req, res) => {
+  res.redirect('/students')
+})
+
 app.get("/students", (req, res) => {
   pool.connect().then(client => {
     client.query("SELECT * FROM students").then(result => {
 
-      const songs = result.rows
+      const students = result.rows
 
       client.release()
 
-      res.render("students", {students: students})
+      res.render("students/index", {students: students})
     })
   })
 })
+
 
 app.get("/students/new", (req, res) => {
   res.render('students/new', {student: {}})
@@ -71,4 +76,38 @@ app.post("/students", (req, res) => {
     })
 })
 
+app.get("/grades", (req, res) => {
+  pool.connect().then(client => {
+    client.query("SELECT * FROM grades").then(result => {
+
+      const grades = result.rows
+
+      client.release()
+
+      res.render("grades/index", {grades: grades})
+    })
+  })
+})
+
+app.get("/grades/new", (req, res) => {
+  res.render('grades/new', {grade: {}})
+})
+
+app.post("/grades", (req, res) => {
+  const grade = req.body.grade
+
+  pool
+  .query("INSERT INTO grades(subject, grade_value, student_id) VALUES ($1, $2, $3)", [
+    grade.subject,
+    grade.grade_value,
+    grade.student_id,
+  ])
+  .then(result => {
+    res.redirect('/grades')
+  })
+  .catch(err => {
+    console.log(err)
+    res.sendStatus(500)
+  })
+})
 module.exports = app

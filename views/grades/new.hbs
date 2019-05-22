@@ -1,1 +1,22 @@
-<h1>New Party Playlist Songs Page</h1>
+<h1>Add New Grade</h1>
+
+<form action='/grades' method='POST'>
+  <div>
+    <label>Subject:</label>
+    <input type='text' name='grade[subject]' />
+  </div>
+
+  <div>
+    <label>Grade Value:</label>
+    <input type='text' name='grade[grade_value]' />
+  </div>
+
+  <div>
+    <label>Student Id</label>
+    <input type='text' name='grade[student_id]' />
+  </div>
+
+  <div>
+    <input type='submit' value='Add Grade' />
+  </div>
+</form>

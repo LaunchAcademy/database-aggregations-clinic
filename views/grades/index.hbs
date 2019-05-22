@@ -1,11 +1,16 @@
 <h1>All of the Grades for Students</h1>
 
 <table>
+  <tr>
+    <th>Subject</th>
+    <th>Grade</th>
+    <th>Student Id</th>
+  </tr>
   {{#each grades }}
   <tr>
-    <td>{{ this.name }}</td>
-    <td>{{ this.year }}</td>
-    <td>{{ this.demerit_count }}</td>
+    <td>{{ this.subject }}</td>
+    <td>{{ this.grade_value }}</td>
+    <td>{{ this.student_id }}</td>
   </tr>
   {{/each}}
 </table>
