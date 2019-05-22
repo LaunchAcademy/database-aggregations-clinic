@@ -1,6 +1,18 @@
+SELECT COUNT(demerit_count) FROM students;
 
+SELECT SUM(demerit_count) FROM students;
+-- for grade 11
+SELECT SUM(demerit_count) FROM students GROUP BY year HAVING year = 11;
 
+SELECT demerit_count, name FROM students ORDER BY demerit_count DESC NULLS LAST LIMIT 1;
 
+SELECT AVG(demerit_count) FROM students;
+
+-- average grade for class
+SELECT AVG(grade_value), student_id FROM grades
+
+-- average grade per students
+SELECT AVG(grade_value), student_id FROM grades GROUP BY student_id
 
 
 

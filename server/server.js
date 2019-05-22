@@ -53,7 +53,6 @@ app.get("/students", (req, res) => {
   })
 })
 
-
 app.get("/students/new", (req, res) => {
   res.render('students/new', {student: {}})
 })
